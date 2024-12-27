@@ -7,4 +7,4 @@ To install just drag the files into the "plugins" folder in your Endless Sky ins
 Improvements and bug reports welcome!
 
 Known issues:
-Very long messages can go behind the ship and status bars.
+- Very long messages can go behind the ship and status bars.
