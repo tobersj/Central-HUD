@@ -6,5 +6,7 @@ To install just drag the files into the "plugins" folder in your Endless Sky ins
 
 Improvements and bug reports welcome!
 
+<a><img src="./screenshot 1.png" title="Screenshot of new HUD layout"></a>
+
 Known issues:
 - Very long messages can go behind the ship and status bars.
