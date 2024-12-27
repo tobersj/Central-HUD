@@ -1,0 +1,2 @@
+name "Central HUD"
+about `Slightly rearranges the HUD of your flagship during flight. Originally made for another plugin I am making, however it seemed like people liked the look of it anyway. I have included an optional colour scheme which will be used in my main plugin. This starts out commentated (with #), so just remove the "#" to use it.`
