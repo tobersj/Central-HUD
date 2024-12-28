@@ -1,13 +1,3 @@
-# Colors used to draw certain HUD elements in-flight.
-#color "shields" .5 .5 .5 .8
-#color "hull" .70 .62 .43 .75
-#color "disabled hull" .3 0 0 .3
-#color "heat" .70 .43 .43 .75
-#color "overheat" .97 .82 .72 .75
-#color "energy" .97 .79 .69 .75
-#color "fuel" .97 .70 .65 .75
-
-
 interface "hud"
 	# Player status.
 	anchor top right
@@ -36,33 +26,31 @@ interface "hud"
 	outline "player sprite"
 		center 0 -100
 		dimensions 100 100
-		color "hull"
 	visible if "fast hud sprites"
 	image "player sprite"
 		center 0 -100
 		dimensions 100 100
-		color "hull"
 	visible
 	ring "shields"
 		center 0 -100
 		dimensions 150 150
 		color "shields"
 		size 2
-		"start angle" 110
+		"start angle" 100
 		"span angle" 200
 	ring "hull"
 		center 0 -100
 		dimensions 140 140
 		color "hull"
 		size 2
-		"start angle" 110
+		"start angle" 100
 		"span angle" 200
 	ring "disabled hull"
 		center 0 -100
 		dimensions 140 140
 		color "disabled hull"
 		size 2
-		"start angle" 110
+		"start angle" 100
 		"span angle" 200
 	bar "fuel"
 		from 1 -25
@@ -137,116 +125,114 @@ interface "hud"
 		from 10 10
 		align top left
 	visible
+	anchor top right
 	sprite "ui/radar"
-		from 0 0
-		align top left
+		from -135 255
+
 	point "radar"
-		center 128 128
+		center -135 255
 	value "radar radius" 110
 	value "radar pointer radius" 130
 	
 	sprite "ui/navigation"
-		from 200 0
-		align top left
+		from -75 105
 	string "navigation mode"
-		from 215 20
-		align left
+		from -10 95
+		align right
 		color "medium"
 	string "destination"
-		from 230 40
-		align left
+		from -145 113
+		align right
 		color "medium"
 		width 135
 		truncate back
 	
 	sprite "ui/target"
-		from 0 240
-		align top left
+		from -60 400
+		align top right
 	point "target"
-		center 75 315
+		center -135 475
 		dimensions 140 140
 	value "target radius" 70
 	visible if "!fast hud sprites"
 	outline "target sprite"
-		center 75 315
+		center -135 475
 		dimensions 70 70
 		colored
 	visible if "fast hud sprites"
 	image "target sprite"
-		center 75 315
+		center -135 475
 		dimensions 70 70
 	visible
 	ring "target shields"
-		center 75 315
+		center -135 475
 		dimensions 120 120
 		color "shields"
 		size 1.5
 	ring "target hull"
-		center 75 315
+		center -135 475
 		dimensions 110 110
 		color "hull"
 		size 1.5
 	ring "target disabled hull"
-		center 75 315
+		center -135 475
 		dimensions 110 110
 		color "disabled hull"
 		size 1.5
+
 	
 	visible if "range display"
 	sprite "ui/range"
-		from 130 263
-		align top left
+		from -195 420
 	string "target range"
-		from 160 260
-		align top left
+		from -212 420
+		align right
 	visible if "tactical display"
-	sprite "ui/tactical"
-		from 130 290
-		align top left
+	sprite "_ui/tactical"
+		from -205 497
 	string "target crew"
-		from 162 298
-		align top left
+		from -225 460
+		align top right
 	string "target fuel"
-		from 162 318
-		align top left
+		from -225 480
+		align top right
 	string "target energy"
-		from 157 338
-		align top left
+		from -218 500
+		align top right
 	string "target heat"
-		from 147 358
-		align top left
+		from -210 520
+		align top right
 	visible
 	
 	string "target name"
-		center 75 395
+		center -135 395
 		color "bright"
 		width 150
 		truncate middle
 	string "target type"
-		center 75 415
+		center -135 550
 		color "medium"
-		width 150
+		width -135
 		truncate middle
 	string "target government"
-		center 75 435
+		center -135 570
 		color "medium"
 		width 150
 		truncate middle
 	point "faction markers"
-		center 75 435
+		center -134 570
 	string "mission target"
-		center 75 455
+		center -135 590
 		color "medium"
 	
 	# Other HUD elements:
 	box "escorts"
-		from 0 460 top left
-		to 120 0 bottom left
+		from 0 100 top left
+		to 120 -120 bottom left
 	box "messages"
-		align top center
-		from 120 -200 bottom left
-		to -110 -00 bottom right
-
+		from 10 0 bottom left
+		to -10 -20 bottom right
+		truncate back
 	box "ammo"
 		from -110 450 top right
 		to 0 0 bottom right
